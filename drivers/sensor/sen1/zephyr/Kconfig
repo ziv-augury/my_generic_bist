@@ -1,0 +1,7 @@
+
+
+menuconfig SEN1
+	bool "SENSOR1 SPI sensor driver"
+	depends on SPI
+	help
+	  Enable driver for SEN1 sensor driver

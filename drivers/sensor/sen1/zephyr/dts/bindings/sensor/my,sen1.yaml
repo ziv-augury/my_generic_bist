@@ -1,0 +1,10 @@
+# Copyright (c) 2019 STMicroelectronics
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+    my labs, SEN1 device through SPI bus
+
+compatible: "my,sen1"
+
+include: spi-device.yaml
+

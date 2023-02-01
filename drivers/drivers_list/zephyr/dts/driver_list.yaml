@@ -1,0 +1,14 @@
+# Copyright (c) 2019 STMicroelectronics
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+    Node for holding device tree drivers array
+
+compatible: "driver_list"
+
+include: base.yaml
+
+properties:
+    bist_drvs:
+      type: phandle-array
+      required: true
