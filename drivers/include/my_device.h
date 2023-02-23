@@ -3,9 +3,10 @@
 
 
 #include <zephyr/types.h>
-#include <device.h>
-#include <drivers/sensor.h>
-#include <drivers/flash.h>
+#include <zephyr/device.h>
+#include <zephyr/drivers/sensor.h>
+#include <zephyr/drivers/flash.h>
+
 #include <errno.h>
 
 
@@ -30,7 +31,3 @@ static inline int my_bist_run(const struct device *dev, void* context)
     }
     return api->bist_run(dev, context);
 }
-
-
-// const struct device* my_get_dev(const struct device *dev);
-// int my_get_num_of_devs(const struct device *dev);

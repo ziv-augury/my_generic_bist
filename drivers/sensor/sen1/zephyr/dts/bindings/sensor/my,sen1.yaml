@@ -8,3 +8,7 @@ compatible: "my,sen1"
 
 include: spi-device.yaml
 
+properties:
+    bist:
+      type: boolean
+      required: true

@@ -1,6 +1,0 @@
-
-menuconfig DRIVERS_LIST
-    bool "DRIVERS_LIST"
-    default n
-    help
-      enable grouping drivers from dts

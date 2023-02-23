@@ -1,0 +1,2 @@
+osource "/home/ziv/workspace/my_generic_bist/boards/shields/*/Kconfig.defconfig"
+osource "/home/ziv/workspace/ncs/nrf/boards/shields/*/Kconfig.defconfig"

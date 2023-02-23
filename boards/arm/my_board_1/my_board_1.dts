@@ -8,23 +8,23 @@
 	model = "my_board_1";
 	compatible = "nordic";
 
-	my_bist_drvs: my_bist_drvs_0 {
-		status = "okay";
-		compatible = "driver_list";
-		label = "MY_BIST_DRVS";
-		bist_drvs = <&sen1>;
-	};
+	// my_bist_drvs: my_bist_drvs_0 {
+	// 	status = "okay";
+	// 	compatible = "driver_list";
+	// 	label = "MY_BIST_DRVS";
+	// 	bist_drvs = <&sen1>;
+	// };
 
 	chosen {
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
 		zephyr,code-partitionsen1 = &slot0_partition;	
-		augury,bist_drvs = &my_bist_drvs;
+		// augury,bist_drvs = &my_bist_drvs;
 	};
 
-	bist_chosen {
-		bist1 = &sen1;
-	};
+	// bist_chosen {
+	// 	bist1 = &sen1;
+	// };
 	
 	// aliases {
 	// 	drv_list = &my_bist_drvs_0;
@@ -40,30 +40,31 @@
 	sck-pin = <43>;
 	mosi-pin = <44>;
 	miso-pin = <45>;
-	// cs-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
-	sen1: sen1@0 {
+	sen1@0 {
 		compatible = "my,sen1";
+		status = "okay";
 		reg = <0>;
 		label = "SENSOR1";
 		spi-max-frequency = <8000000>;
+		bist;
 	};
 };
 
-// &spi1 {
-// 	status = "okay";
-// 	sck-pin = <3>;
-// 	mosi-pin = <2>;
-// 	miso-pin = <29>;
-// 	compatible = "nordic,nrf-spim";
-// 	cs-gpios = <&gpio1 4 GPIO_ACTIVE_LOW>;
-// 	sen2@0 {
-// 		compatible = "my,sen2";
-// 		reg = <0>;
-// 		irq_gpios = <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-// 		label = "SENSOR2";
-// 		spi-max-frequency = <8000000>;
-// 	};
-// };
+&spi1 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	sck-pin = <3>;
+	mosi-pin = <2>;
+	miso-pin = <29>;
+	sen2@0 {
+		compatible = "my,sen2";
+		status = "okay";
+		reg = <0>;
+		label = "SENSOR2";
+		spi-max-frequency = <8000000>;
+		bist;
+	};
+};
 
 
 &flash0 {

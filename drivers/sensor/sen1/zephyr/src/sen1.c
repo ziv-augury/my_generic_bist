@@ -1,14 +1,14 @@
 
 #ifdef CONFIG_SEN1
 
-#include <init.h>
+#include <zephyr/init.h>
 #include "my_device.h"
 
 #include "sen1.h"
 #include <sen1_defs.h>
 
 
-#include <logging/log.h>
+#include <zephyr/logging/log.h>
 LOG_MODULE_REGISTER(SEN1, CONFIG_SENSOR_LOG_LEVEL);
 
 

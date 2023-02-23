@@ -15,6 +15,39 @@
 	};
 };
 
+
+&spi0 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	sck-pin = <3>;
+	mosi-pin = <2>;
+	miso-pin = <29>;
+	sen2@0 {
+		compatible = "my,sen2";
+		status = "okay";
+		reg = <0>;
+		label = "SENSOR2";
+		spi-max-frequency = <8000000>;
+		bist;
+	};
+};
+&spi1 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	sck-pin = <43>;
+	mosi-pin = <44>;
+	miso-pin = <45>;
+	sen3@0 {
+		compatible = "my,sen3";
+		status = "okay";
+		reg = <0>;
+		label = "SENSOR3";
+		spi-max-frequency = <8000000>;
+		bist;
+	};
+};
+
+
 &flash0 {
 	partitions {
 		compatible = "fixed-partitions";

@@ -1,0 +1,5 @@
+menuconfig SEN2
+	bool "SENSOR2 SPI sensor driver"
+	depends on SPI
+	help
+	  Enable driver for SEN2 sensor driver

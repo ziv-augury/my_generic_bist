@@ -1,2 +1,0 @@
-osource "/home/zhershkovitch/workspace/my_bist_example/boards/shields/*/Kconfig.defconfig"
-osource "/home/zhershkovitch/workspace/ncs/nrf/boards/shields/*/Kconfig.defconfig"

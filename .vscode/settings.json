@@ -1,9 +1,8 @@
 {
-  "nrf-connect.topdir": "/home/zhershkovitch/workspace/ncs",
-  "nrf-connect.toolchain.path": "/opt/gcc-arm-none-eabi-10.3-2021.10/bin/",
+  "nrf-connect.topdir": "/home/ziv/workspace/ncs",
+  "nrf-connect.toolchain.path": "${nrf-connect.toolchain:2.2.0}",
   "nrf-connect.applications": [
     "${workspaceFolder}/app",
-    "/home/zhershkovitch/workspace/nrf21_beacon"
   ],
   "nrf-connect.boardRoots": [
     "${workspaceFolder}"
@@ -11,6 +10,8 @@
   "files.associations": {
     "my_device.h": "c",
     "device.h": "c",
-    "log.h": "c"
+    "log.h": "c",
+    "bist_manager.h": "c",
+    "sen1.h": "c"
   }
 }

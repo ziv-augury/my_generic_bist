@@ -1,0 +1,5 @@
+menuconfig SEN3
+	bool "SENSOR3 SPI sensor driver"
+	depends on SPI
+	help
+	  Enable driver for SEN3 sensor driver

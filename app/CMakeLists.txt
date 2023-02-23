@@ -3,17 +3,25 @@
 cmake_minimum_required(VERSION 3.20.0)
 
 
-list(APPEND ZEPHYR_EXTRA_MODULES ${CMAKE_CURRENT_LIST_DIR}/../drivers/drivers_list/)
-list(APPEND
-    DTS_ROOT
-    ${CMAKE_CURRENT_LIST_DIR}/../drivers/drivers_list/zephyr/
-    )
-
 if("${BOARD}" MATCHES "my_board_1")
     list(APPEND ZEPHYR_EXTRA_MODULES ${CMAKE_CURRENT_LIST_DIR}/../drivers/sensor/sen1/)
     list(APPEND
         DTS_ROOT
         ${CMAKE_CURRENT_LIST_DIR}/../drivers/sensor/sen1/zephyr/
+        )
+endif()
+      
+    list(APPEND ZEPHYR_EXTRA_MODULES ${CMAKE_CURRENT_LIST_DIR}/../drivers/sensor/sen2/)
+    list(APPEND
+        DTS_ROOT
+        ${CMAKE_CURRENT_LIST_DIR}/../drivers/sensor/sen2/zephyr/
+        )
+
+if("${BOARD}" MATCHES "my_board_2")
+    list(APPEND ZEPHYR_EXTRA_MODULES ${CMAKE_CURRENT_LIST_DIR}/../drivers/sensor/sen3/)
+    list(APPEND
+        DTS_ROOT
+        ${CMAKE_CURRENT_LIST_DIR}/../drivers/sensor/sen3/zephyr/
         )
 endif()
 
